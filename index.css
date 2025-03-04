@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.perfil-img {
+    width: 150px; /* Tamaño de la imagen */
+    height: 150px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    display: block;
+    margin: 0 auto 20px; /* Centra la imagen y agrega espacio debajo */
+    object-fit: cover; /* Recorta la imagen para que encaje bien */
+    border: 3px solid #333; /* Borde opcional */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/*para la descripción de mi portafolio*/
+.sobre-mi {
+    max-width: 800px; /* Define el ancho máximo del div */
+    margin: 0 auto; /* Centra el div en la página */
+    padding: 20px; /* Añade espacio interno */
+    background-color: #f3f4f6; /* Color de fondo similar a Tailwind */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.sobre-mi h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sobre-mi p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/*sección de skills*/
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill i {
+    font-size: 40px;
+    color: #333;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.skill:hover i {
+    transform: rotate(360deg);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.skills-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 8px;
+}
+
+/*sección de los proyectos*/
+#proyectos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+.proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 900px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#segundo-proyecto{
+    flex-direction: row-reverse;
+}
+
+.proyecto-img {
+    width: 100%;
+    max-width: 350px;
+    height: 270px;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+}
+
+.proyecto-info {
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.proyecto-info h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.proyecto-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.botones-proyecto {
+    display: flex;
+    gap: 15px;
+}
+
+.botones-proyecto a {
+    text-decoration: none;
+}
+
+.button-repo, .button-prueba {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-repo {
+    background-color: #828d98;
+    color: white;
+}
+
+.button-repo:hover {
+    background-color: #333;
+}
+
+.button-prueba {
+    background-color: #828d98;
+    color: white;
+}
+
+.button-prueba:hover {
+    background-color: #333;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .proyecto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .proyecto-img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .proyecto-info {
+        text-align: center;
+    }
+
+    .botones-proyecto {
+        justify-content: center;
+    }
+}
+
+/*sección de contacto*/
+#contacto {
+    max-width: 600px; /* Limita el ancho de la sección */
+    margin: 0 auto; /* Centra la sección */
+    padding: 20px;
+    background-color: #f3f4f6; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centra el contenido */
+}
+
+#contacto h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contacto p {
+    margin-bottom: 5rem;
+    color: #555;
+    font-size: 16px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre los enlaces */
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Estilos individuales por plataforma */
+.linkedin {
+    background-color: #0077b5;
+    color: white;
+}
+
+.linkedin:hover {
+    background-color: #005582;
+}
+
+.indeed {
+    background-color: #2a68a2;
+    color: white;
+}
+
+.indeed:hover {
+    background-color: #1b4d7d;
+}
+
+.github {
+    background-color: #333;
+    color: white;
+}
+
+.github:hover {
+    background-color: #222;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
