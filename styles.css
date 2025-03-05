@@ -134,7 +134,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 900px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -144,7 +144,7 @@ section {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-#segundo-proyecto{
+.invertido{
     flex-direction: row-reverse;
 }
 
